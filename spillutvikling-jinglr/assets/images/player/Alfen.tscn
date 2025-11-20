@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7j8n8rpe6j4b"]
+
+[ext_resource type="Texture2D" uid="uid://d1c4x8gvces6v" path="res://assets/images/player/Moving (1).png" id="1_ldqgx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yjkag"]
+radius = 7.0
+height = 32.0
+
+[node name="Alfen" type="CharacterBody2D"]
+position = Vector2(42, 8)
+
+[node name="Skin" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 26)
+texture = ExtResource("1_ldqgx")
+region_enabled = true
+region_rect = Rect2(40, 32, 16, 32)
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(1, 27)
+shape = SubResource("CapsuleShape2D_yjkag")
