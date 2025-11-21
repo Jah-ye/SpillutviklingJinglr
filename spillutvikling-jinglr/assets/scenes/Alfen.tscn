@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7j8n8rpe6j4b"]
+
+[ext_resource type="Texture2D" uid="uid://bh0wm3cmlep4j" path="res://assets/images/player/ElvIdle.png" id="1_t13mn"]
+[ext_resource type="Texture2D" uid="uid://dafvurd7exnos" path="res://assets/images/player/ElvWalk1.png" id="2_atokf"]
+[ext_resource type="Texture2D" uid="uid://gp3aw2wml6yy" path="res://assets/images/player/ElvWalk2.png" id="3_f0bwa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7dwsv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_t13mn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_atokf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_f0bwa")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yjkag"]
+radius = 8.0
+height = 32.0
+
+[node name="Alfen" type="CharacterBody2D"]
+position = Vector2(42, 8)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, 26)
+sprite_frames = SubResource("SpriteFrames_7dwsv")
+animation = &"walk"
+frame_progress = 0.60945284
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(2, 27)
+shape = SubResource("CapsuleShape2D_yjkag")
