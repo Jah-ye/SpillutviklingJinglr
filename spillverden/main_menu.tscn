@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://78xeufwccsb3"]
 
-[ext_resource type="Texture2D" uid="uid://dr5gsxjm8a4n4" path="res://Backround.webp" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://csxm11wftjhvj" path="res://main_menu.gd" id="1_fu7sn"]
 [ext_resource type="Texture2D" uid="uid://hi6wqv17ftow" path="res://Logo.png" id="2_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://bm0avbipenecw" path="res://Background.png" id="2_glbon"]
 [ext_resource type="Script" uid="uid://b0dulqht324g2" path="res://button.gd" id="3_jix8l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
-texture = ExtResource("1_06t4h")
+texture = ExtResource("2_glbon")
 modulate_color = Color(0.48374587, 0.48374587, 0.4837457, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
@@ -129,9 +129,9 @@ text = "Exit"
 
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 0
-offset_left = -225.0
+offset_left = -246.0
 offset_top = -303.0
-offset_right = 489.0
+offset_right = 535.0
 offset_bottom = -64.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_fu7sn")
 
