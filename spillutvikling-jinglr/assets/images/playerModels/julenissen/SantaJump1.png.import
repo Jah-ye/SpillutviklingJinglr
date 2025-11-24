@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pwutoepiufo1"
-path="res://.godot/imported/SantaWalk1.png-bbb85a25489bd925338340b6e49c74fb.ctex"
+uid="uid://b5uq3jhugovro"
+path="res://.godot/imported/SantaJump1.png-4dd821819059627614f47ac066b83a7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/player/SantaWalk1.png"
-dest_files=["res://.godot/imported/SantaWalk1.png-bbb85a25489bd925338340b6e49c74fb.ctex"]
+source_file="res://assets/images/playerModels/julenissen/SantaJump1.png"
+dest_files=["res://.godot/imported/SantaJump1.png-4dd821819059627614f47ac066b83a7f.ctex"]
 
 [params]
 

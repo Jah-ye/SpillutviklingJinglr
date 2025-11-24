@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btgdrk2xhywxo"
-path="res://.godot/imported/SantaWalk2.png-bf5ee10198b6d5fea107ca29797a0696.ctex"
+uid="uid://dx416835kd00x"
+path="res://.godot/imported/JumpElf.png-ef604de6166f2b523524b6233c873e1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/player/SantaWalk2.png"
-dest_files=["res://.godot/imported/SantaWalk2.png-bf5ee10198b6d5fea107ca29797a0696.ctex"]
+source_file="res://assets/images/playerModels/alfen/JumpElf.png"
+dest_files=["res://.godot/imported/JumpElf.png-ef604de6166f2b523524b6233c873e1f.ctex"]
 
 [params]
 

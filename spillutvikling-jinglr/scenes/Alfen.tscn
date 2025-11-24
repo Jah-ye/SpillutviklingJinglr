@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://b7j8n8rpe6j4b"]
 
-[ext_resource type="Texture2D" uid="uid://bh0wm3cmlep4j" path="res://assets/images/player/ElvIdle.png" id="1_t13mn"]
-[ext_resource type="Texture2D" uid="uid://dafvurd7exnos" path="res://assets/images/player/ElvWalk1.png" id="2_atokf"]
-[ext_resource type="Texture2D" uid="uid://gp3aw2wml6yy" path="res://assets/images/player/ElvWalk2.png" id="3_f0bwa"]
+[ext_resource type="Texture2D" uid="uid://bh0wm3cmlep4j" path="res://assets/images/playerModels/alfen/ElvIdle.png" id="1_t13mn"]
+[ext_resource type="Texture2D" uid="uid://dafvurd7exnos" path="res://assets/images/playerModels/alfen/ElvWalk1.png" id="2_atokf"]
+[ext_resource type="Texture2D" uid="uid://gp3aw2wml6yy" path="res://assets/images/playerModels/alfen/ElvWalk2.png" id="3_f0bwa"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7dwsv"]
 animations = [{
