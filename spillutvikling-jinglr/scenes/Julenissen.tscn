@@ -48,21 +48,22 @@ radius = 8.0
 height = 24.0
 
 [node name="Julenissen" type="CharacterBody2D"]
-position = Vector2(370, 286)
+position = Vector2(317, 416)
+scale = Vector2(2, 2)
 script = ExtResource("1_acrh8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(298, -172)
+position = Vector2(34.233337, -32.433304)
 scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_6v4xq")
 animation = &"jump"
 frame_progress = 0.75544655
 
 [node name="BodyHitbox" type="CollisionShape2D" parent="."]
-position = Vector2(297.75, -160.25)
+position = Vector2(33.983368, -20.683334)
 shape = SubResource("RectangleShape2D_wcq2t")
 
 [node name="HeadHitbox" type="CollisionShape2D" parent="."]
-position = Vector2(297, -198)
+position = Vector2(33.233368, -58.433334)
 shape = SubResource("CapsuleShape2D_hdrju")

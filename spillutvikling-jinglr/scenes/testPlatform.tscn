@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnydvlv4imi2m"]
+[gd_scene load_steps=5 format=3 uid="uid://dnydvlv4imi2m"]
 
 [ext_resource type="Texture2D" uid="uid://gp3aw2wml6yy" path="res://assets/images/playerModels/alfen/ElvWalk2.png" id="1_ck6ae"]
 [ext_resource type="PackedScene" uid="uid://cmq40tfweirwp" path="res://scenes/Julenissen.tscn" id="2_sgt0j"]
+[ext_resource type="PackedScene" uid="uid://b7j8n8rpe6j4b" path="res://scenes/Alfen.tscn" id="3_4u3k0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0jkc"]
 size = Vector2(554, 15)
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(459, 240)
+position = Vector2(718, 599)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(0, 31)
@@ -23,4 +24,7 @@ scale = Vector2(1, 17.749853)
 texture = ExtResource("1_ck6ae")
 
 [node name="Julenissen" parent="." instance=ExtResource("2_sgt0j")]
-position = Vector2(-151, 115)
+position = Vector2(-121, -4)
+
+[node name="Alfen" parent="." instance=ExtResource("3_4u3k0")]
+position = Vector2(242, -102)

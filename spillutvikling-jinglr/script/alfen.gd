@@ -24,14 +24,14 @@ func apply_gravity(delta):
 func get_input():
 	direction = Vector2.ZERO
 
-	if Input.is_action_pressed("santa_right"):
+	if Input.is_action_pressed("elf_right"):
 		direction.x += 1
-	if Input.is_action_pressed("santa_left"):
+	if Input.is_action_pressed("elf_left"):
 		direction.x -= 1
 
 	velocity.x = direction.x * speed
 
-	if Input.is_action_just_pressed("santa_jump") and is_on_floor():
+	if Input.is_action_just_pressed("elf_jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 func update_animation():
