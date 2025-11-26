@@ -1,9 +1,16 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=6 format=3 uid="uid://dnydvlv4imi2m"]
+=======
+[gd_scene load_steps=5 format=3 uid="uid://dnydvlv4imi2m"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://gp3aw2wml6yy" path="res://assets/images/playerModels/alfen/ElvWalk2.png" id="1_ck6ae"]
 [ext_resource type="PackedScene" uid="uid://cmq40tfweirwp" path="res://scenes/Julenissen.tscn" id="2_sgt0j"]
 [ext_resource type="PackedScene" uid="uid://b7j8n8rpe6j4b" path="res://scenes/Alfen.tscn" id="3_4u3k0"]
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://c6ofp8d87hqql" path="res://script/alfen.gd" id="4_761fa"]
+=======
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0jkc"]
 size = Vector2(554, 15)
@@ -29,4 +36,7 @@ position = Vector2(-151, 115)
 
 [node name="Alfen" parent="." instance=ExtResource("3_4u3k0")]
 position = Vector2(89, -63)
+<<<<<<< Updated upstream
 script = ExtResource("4_761fa")
+=======
+>>>>>>> Stashed changes
