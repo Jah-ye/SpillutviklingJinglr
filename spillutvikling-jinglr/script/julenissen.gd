@@ -3,7 +3,11 @@ extends CharacterBody2D
 var speed : float = 225.0
 var gravity : float = 1200.0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 const JUMP_VELOCITY = -300.0
+=======
+const JUMP_VELOCITY = -200.0
+>>>>>>> Stashed changes
 =======
 const JUMP_VELOCITY = -200.0
 >>>>>>> Stashed changes
