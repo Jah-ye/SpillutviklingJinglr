@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dafvurd7exnos"
-path="res://.godot/imported/ElvWalk1.png-0013c0c5faecb67ebe92acc481649f16.ctex"
+uid="uid://ms1upohxei1p"
+path="res://.godot/imported/Moving (1).png-68362614526c0ce797fd6b97a70e6772.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/playerModels/alfen/ElvWalk1.png"
-dest_files=["res://.godot/imported/ElvWalk1.png-0013c0c5faecb67ebe92acc481649f16.ctex"]
+source_file="res://assets/images/playerModels/alfen/Moving (1).png"
+dest_files=["res://.godot/imported/Moving (1).png-68362614526c0ce797fd6b97a70e6772.ctex"]
 
 [params]
 

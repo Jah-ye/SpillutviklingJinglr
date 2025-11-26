@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SpillutviklingJinglr"
-run/main_scene="uid://dnydvlv4imi2m"
+run/main_scene="uid://yil2e36xm2uw"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
 [input]

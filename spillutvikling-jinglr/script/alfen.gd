@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed : float = 300.0
+var speed : float = 350.0
 var gravity : float = 1200.0
 const JUMP_VELOCITY = -400.0
 
