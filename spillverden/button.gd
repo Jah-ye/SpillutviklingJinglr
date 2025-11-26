@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 
 
 @export var target_scene: String = "res://SCENE1.tscn"
