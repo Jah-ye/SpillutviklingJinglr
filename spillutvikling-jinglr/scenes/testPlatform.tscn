@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://yil2e36xm2uw"]
+
+[ext_resource type="PackedScene" uid="uid://cmq40tfweirwp" path="res://scenes/Julenissen.tscn" id="1_sgt0j"]
+[ext_resource type="PackedScene" uid="uid://b7j8n8rpe6j4b" path="res://scenes/Alfen.tscn" id="2_4u3k0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icxhm"]
+size = Vector2(1270, 20)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(305, 175)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(331, -3)
+shape = SubResource("RectangleShape2D_icxhm")
+
+[node name="Julenissen" parent="." instance=ExtResource("1_sgt0j")]
+position = Vector2(-71, -21)
+
+[node name="Alfen" parent="." instance=ExtResource("2_4u3k0")]
+position = Vector2(17, -90)
