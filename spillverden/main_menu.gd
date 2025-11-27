@@ -29,3 +29,7 @@ func _on_Options_2_pressed() -> void:
 
 func _on_Exit_3_pressed() -> void:
 	get_tree().quit() 
+
+
+func _on_button_options_pressed() -> void:
+	_ready()
