@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcm8d22rfl3if"]
+
+[ext_resource type="PackedScene" uid="uid://d1raexvdbeicy" path="res://scripts/Alfen.tscn" id="1_tcubu"]
+[ext_resource type="Texture2D" uid="uid://dcmgrx5ymynss" path="res://Sprites/image.png" id="2_ryyof"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tcubu"]
+distance = -178.0
+
+[node name="Spillet" type="Node2D"]
+
+[node name="Alfen" parent="." instance=ExtResource("1_tcubu")]
+position = Vector2(15, -41)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(187, -70)
+shape = SubResource("WorldBoundaryShape2D_tcubu")
+
+[node name="Image" type="Sprite2D" parent="."]
+position = Vector2(170, 173)
+texture = ExtResource("2_ryyof")
