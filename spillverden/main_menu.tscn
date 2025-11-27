@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://78xeufwccsb3"]
+[gd_scene load_steps=14 format=3 uid="uid://78xeufwccsb3"]
 
 [ext_resource type="Script" uid="uid://csxm11wftjhvj" path="res://main_menu.gd" id="1_fu7sn"]
 [ext_resource type="Texture2D" uid="uid://hi6wqv17ftow" path="res://Logo.png" id="2_7vrkn"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c0yyq5fd4xggr" path="res://STart.png" id="3_nlkkf"]
 [ext_resource type="Texture2D" uid="uid://hhp3wqp262tm" path="res://OPTIONS 1.png" id="5_qe12f"]
 [ext_resource type="Texture2D" uid="uid://bmfu1ucitahik" path="res://EXIT.png" id="6_qe12f"]
+[ext_resource type="AudioStream" uid="uid://bcmhhqrywthcu" path="res://motivational-christmas-corporate-442034.mp3" id="8_8qtwp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
 texture = ExtResource("2_glbon")
@@ -135,6 +136,9 @@ size_flags_vertical = 3
 texture_normal = SubResource("AtlasTexture_0o4t1")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_8qtwp")
 
 [connection signal="pressed" from="MainButtons/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainButtons/Button2" to="." method="_on_Options_2_pressed"]
