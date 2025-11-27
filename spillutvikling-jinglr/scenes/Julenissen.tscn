@@ -1,32 +1,37 @@
-[gd_scene load_steps=24 format=3 uid="uid://cmq40tfweirwp"]
+[gd_scene load_steps=25 format=3 uid="uid://cmq40tfweirwp"]
 
 [ext_resource type="Script" uid="uid://bjyrpdlem3i7h" path="res://script/julenissen.gd" id="1_acrh8"]
 [ext_resource type="Texture2D" uid="uid://dhemmeb0a0x4m" path="res://assets/images/playerModels/julenissen/SantaJump.png" id="3_acrh8"]
 [ext_resource type="Texture2D" uid="uid://bbkp6rs17v6l0" path="res://assets/images/playerModels/julenissen/SantaIdle 1.png" id="3_pp0d5"]
 [ext_resource type="Texture2D" uid="uid://csycxq8sbv0l2" path="res://assets/images/playerModels/julenissen/Santawalk.png" id="4_wjos5"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nmhvr"]
-load_path = "res://.godot/imported/SantaIdle.png-98c918dd2c17f4ca0ccb6d005838a5d9.ctex"
+[sub_resource type="AtlasTexture" id="AtlasTexture_ythb1"]
+atlas = ExtResource("3_pp0d5")
+region = Rect2(0, 128, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4td84"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_acrh8"]
 atlas = ExtResource("3_pp0d5")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_he1nl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjos5"]
+atlas = ExtResource("3_pp0d5")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmhvr"]
 atlas = ExtResource("3_pp0d5")
 region = Rect2(0, 64, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ythb1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4td84"]
+atlas = ExtResource("3_pp0d5")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_he1nl"]
 atlas = ExtResource("3_pp0d5")
 region = Rect2(0, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f5gva"]
 atlas = ExtResource("3_pp0d5")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4onib"]
-atlas = ExtResource("3_pp0d5")
-region = Rect2(64, 64, 64, 64)
+region = Rect2(64, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pp0d5"]
 atlas = ExtResource("3_acrh8")
@@ -72,7 +77,16 @@ region = Rect2(64, 64, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_nmhvr")
+"texture": SubResource("AtlasTexture_ythb1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acrh8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjos5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmhvr")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4td84")
@@ -81,17 +95,11 @@ animations = [{
 "texture": SubResource("AtlasTexture_he1nl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ythb1")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_f5gva")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4onib")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -114,7 +122,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -131,7 +139,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 12.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wcq2t"]
@@ -139,19 +147,19 @@ size = Vector2(44.288452, 40.769226)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hdrju"]
 radius = 5.384613
-height = 24.0
+height = 21.538483
 
 [node name="Julenissen" type="CharacterBody2D"]
 position = Vector2(459, 407)
 script = ExtResource("1_acrh8")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(2.5999756, -70.399994)
 scale = Vector2(1.3, 1.3)
 sprite_frames = SubResource("SpriteFrames_6v4xq")
-animation = &"walk"
-frame_progress = 0.9258457
+animation = &"idle"
+frame_progress = 0.6413908
 
 [node name="BodyHitbox" type="CollisionShape2D" parent="."]
 position = Vector2(2, -56)

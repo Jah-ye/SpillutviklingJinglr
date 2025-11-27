@@ -12,7 +12,7 @@ position = Vector2(305, 175)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-3, 0)
+position = Vector2(331, -3)
 shape = SubResource("RectangleShape2D_icxhm")
 
 [node name="Julenissen" parent="." instance=ExtResource("1_sgt0j")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b7j8n8rpe6j4b"]
+[gd_scene load_steps=23 format=3 uid="uid://b7j8n8rpe6j4b"]
 
 [ext_resource type="Script" path="res://script/alfen.gd" id="1_vb1qp"]
 [ext_resource type="Texture2D" uid="uid://cwh1mbltn58jj" path="res://assets/images/playerModels/alfen/Idle.png" id="2_yh66k"]
@@ -77,7 +77,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -112,7 +112,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -135,32 +135,25 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 10.0
+"speed": 12.0
 }]
 
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_vb1qp"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yh66k"]
-size = Vector2(14.285715, 22.857141)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vb1qp"]
+radius = 5.0
 
 [node name="Alfen" type="CharacterBody2D"]
 position = Vector2(58, 17)
 script = ExtResource("1_vb1qp")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1, 26)
 scale = Vector2(1.4, 1.4)
 sprite_frames = SubResource("SpriteFrames_7dwsv")
-animation = &"jump"
-frame_progress = 0.4757177
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 33)
-scale = Vector2(1.4, 1.4)
-shape = SubResource("ConvexPolygonShape2D_vb1qp")
+animation = &"idle"
+frame_progress = 0.4364744
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(2, 33)
+position = Vector2(2, 28)
 scale = Vector2(1.4, 1.4)
-shape = SubResource("RectangleShape2D_yh66k")
+shape = SubResource("CapsuleShape2D_vb1qp")
