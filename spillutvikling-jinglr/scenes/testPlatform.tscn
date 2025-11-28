@@ -7,7 +7,7 @@
 size = Vector2(1145.5, 20)
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(258, 159)
+position = Vector2(291, 425)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -16,7 +16,7 @@ position = Vector2(316.25, -2)
 shape = SubResource("RectangleShape2D_s1wn1")
 
 [node name="Alfen" parent="." instance=ExtResource("2_sgt0j")]
-position = Vector2(205, -100)
+position = Vector2(284, -127)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_4u3k0")]
 position = Vector2(377, -72)
