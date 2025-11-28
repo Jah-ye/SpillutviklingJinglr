@@ -139,7 +139,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vb1qp"]
-radius = 5.0
+radius = 6.4285736
 
 [node name="Alfen" type="CharacterBody2D"]
 position = Vector2(58, 17)
@@ -151,7 +151,7 @@ position = Vector2(1, 26)
 scale = Vector2(1.4, 1.4)
 sprite_frames = SubResource("SpriteFrames_7dwsv")
 animation = &"idle"
-frame_progress = 0.4364744
+frame_progress = 0.40062723
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(2, 28)

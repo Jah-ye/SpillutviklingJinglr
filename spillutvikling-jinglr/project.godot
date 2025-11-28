@@ -14,6 +14,13 @@ config/name="SpillutviklingJinglr"
 run/main_scene="uid://yil2e36xm2uw"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
+[file_customization]
+
+folder_colors={
+"res://assets/images/playerModels/alfen/": "green",
+"res://assets/images/playerModels/julenissen/": "red"
+}
+
 [input]
 
 santa_jump={

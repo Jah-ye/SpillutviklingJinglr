@@ -35,7 +35,7 @@ func get_input():
 		velocity.y = JUMP_VELOCITY
 
 func update_animation():
-	var animated_sprite = $AnimatedSprite2D
+	var animated_sprite = $AnimatedSprite
 
 	if not is_on_floor():
 		animated_sprite.play("jump")
