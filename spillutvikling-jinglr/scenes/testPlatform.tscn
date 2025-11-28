@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://yil2e36xm2uw"]
 
-[ext_resource type="PackedScene" uid="uid://cmq40tfweirwp" path="res://scenes/Julenissen.tscn" id="1_rg1r6"]
+[ext_resource type="PackedScene" uid="uid://cmq40tfweirwp" path="res://scenes/Julenissen.tscn" id="2_4u3k0"]
 [ext_resource type="PackedScene" uid="uid://b7j8n8rpe6j4b" path="res://scenes/Alfen.tscn" id="2_sgt0j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s1wn1"]
-size = Vector2(513, 20)
+size = Vector2(1145.5, 20)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(258, 159)
@@ -12,11 +12,11 @@ position = Vector2(258, 159)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, -2)
+position = Vector2(316.25, -2)
 shape = SubResource("RectangleShape2D_s1wn1")
 
-[node name="Julenissen" parent="." instance=ExtResource("1_rg1r6")]
-position = Vector2(-216, -29)
-
 [node name="Alfen" parent="." instance=ExtResource("2_sgt0j")]
-position = Vector2(-112, -96)
+position = Vector2(205, -100)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_4u3k0")]
+position = Vector2(377, -72)

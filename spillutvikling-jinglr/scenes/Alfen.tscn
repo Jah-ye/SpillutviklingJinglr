@@ -1,9 +1,13 @@
-[gd_scene load_steps=23 format=3 uid="uid://b7j8n8rpe6j4b"]
+[gd_scene load_steps=24 format=3 uid="uid://b7j8n8rpe6j4b"]
 
 [ext_resource type="Script" path="res://script/alfen.gd" id="1_vb1qp"]
 [ext_resource type="Texture2D" uid="uid://cwh1mbltn58jj" path="res://assets/images/playerModels/alfen/Idle.png" id="2_yh66k"]
 [ext_resource type="Texture2D" uid="uid://dx416835kd00x" path="res://assets/images/playerModels/alfen/JumpElf.png" id="3_yh66k"]
-[ext_resource type="Texture2D" uid="uid://ms1upohxei1p" path="res://assets/images/playerModels/alfen/Moving (1).png" id="4_vb1qp"]
+[ext_resource type="Texture2D" uid="uid://ulxp8mcnfvy3" path="res://assets/images/playerModels/alfen/ElfMoving.png" id="4_vb1qp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yh66k"]
+atlas = ExtResource("2_yh66k")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_17oyc"]
 atlas = ExtResource("3_yh66k")
@@ -45,27 +49,27 @@ region = Rect2(64, 64, 32, 32)
 atlas = ExtResource("3_yh66k")
 region = Rect2(0, 96, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yh66k"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pldrh"]
 atlas = ExtResource("4_vb1qp")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pldrh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_luqwe"]
 atlas = ExtResource("4_vb1qp")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_luqwe"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_inrnm"]
 atlas = ExtResource("4_vb1qp")
 region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_inrnm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipk82"]
 atlas = ExtResource("4_vb1qp")
 region = Rect2(32, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ipk82"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_oeuwf"]
 atlas = ExtResource("4_vb1qp")
 region = Rect2(0, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oeuwf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5a0ss"]
 atlas = ExtResource("4_vb1qp")
 region = Rect2(32, 64, 32, 32)
 
@@ -73,11 +77,11 @@ region = Rect2(32, 64, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_yh66k")
+"texture": SubResource("AtlasTexture_yh66k")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 12.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -112,12 +116,9 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump",
-"speed": 12.0
+"speed": 8.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yh66k")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pldrh")
 }, {
@@ -132,6 +133,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oeuwf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5a0ss")
 }],
 "loop": true,
 "name": &"walk",
@@ -139,7 +143,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vb1qp"]
-radius = 6.4285736
+radius = 5.714283
 
 [node name="Alfen" type="CharacterBody2D"]
 position = Vector2(58, 17)
@@ -150,10 +154,10 @@ texture_filter = 1
 position = Vector2(1, 26)
 scale = Vector2(1.4, 1.4)
 sprite_frames = SubResource("SpriteFrames_7dwsv")
-animation = &"idle"
-frame_progress = 0.40062723
+animation = &"walk"
+frame_progress = 0.7030216
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(2, 28)
+position = Vector2(1.1920929e-07, 28)
 scale = Vector2(1.4, 1.4)
 shape = SubResource("CapsuleShape2D_vb1qp")

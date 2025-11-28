@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ms1upohxei1p"
-path="res://.godot/imported/Moving (1).png-68362614526c0ce797fd6b97a70e6772.ctex"
+uid="uid://ulxp8mcnfvy3"
+path="res://.godot/imported/ElfMoving.png-1bba7b3c2a9f803843b7df80c933b3a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/playerModels/alfen/Moving (1).png"
-dest_files=["res://.godot/imported/Moving (1).png-68362614526c0ce797fd6b97a70e6772.ctex"]
+source_file="res://assets/images/playerModels/alfen/ElfMoving.png"
+dest_files=["res://.godot/imported/ElfMoving.png-1bba7b3c2a9f803843b7df80c933b3a5.ctex"]
 
 [params]
 

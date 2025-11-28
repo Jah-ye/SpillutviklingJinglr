@@ -14,13 +14,6 @@ config/name="SpillutviklingJinglr"
 run/main_scene="uid://yil2e36xm2uw"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
-[file_customization]
-
-folder_colors={
-"res://assets/images/playerModels/alfen/": "green",
-"res://assets/images/playerModels/julenissen/": "red"
-}
-
 [input]
 
 santa_jump={
@@ -53,3 +46,9 @@ elf_right={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
 ]
 }
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+textures/decals/filter=2
+textures/light_projectors/filter=2
