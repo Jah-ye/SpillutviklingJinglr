@@ -14,3 +14,8 @@ config/name="Spillverden"
 run/main_scene="uid://78xeufwccsb3"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/mode=3
+window/stretch/mode="canvas_items"

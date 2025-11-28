@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://78xeufwccsb3"]
+[gd_scene load_steps=18 format=3 uid="uid://78xeufwccsb3"]
 
 [ext_resource type="Script" uid="uid://csxm11wftjhvj" path="res://main_menu.gd" id="1_fu7sn"]
 [ext_resource type="Texture2D" uid="uid://hi6wqv17ftow" path="res://Logo.png" id="2_7vrkn"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bmfu1ucitahik" path="res://EXIT.png" id="6_qe12f"]
 [ext_resource type="AudioStream" uid="uid://bcmhhqrywthcu" path="res://motivational-christmas-corporate-442034.mp3" id="8_8qtwp"]
 [ext_resource type="Script" uid="uid://dndf28x28k7ug" path="res://audio_controll.gd" id="8_dy7ct"]
+[ext_resource type="Script" uid="uid://btwr6s80nxevp" path="res://full_screen.gd" id="9_0o4t1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
 texture = ExtResource("2_glbon")
@@ -162,6 +163,15 @@ value = 1.0
 script = ExtResource("8_dy7ct")
 audio_bus_name = "Music"
 
+[node name="FullScreen" type="CheckButton" parent="Options"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 125.0
+offset_right = 418.0
+offset_bottom = 173.0
+text = "FullScreen"
+script = ExtResource("9_0o4t1")
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_8qtwp")
 autoplay = true
@@ -172,3 +182,4 @@ bus = &"Music"
 [connection signal="pressed" from="MainButtons/Button3" to="." method="_on_Exit_3_pressed"]
 [connection signal="pressed" from="Options/Button3" to="." method="_on_button_options_pressed"]
 [connection signal="value_changed" from="Options/AudioControll" to="Options/AudioControll" method="_on_value_changed"]
+[connection signal="toggled" from="Options/FullScreen" to="Options/FullScreen" method="_on_toggled"]
