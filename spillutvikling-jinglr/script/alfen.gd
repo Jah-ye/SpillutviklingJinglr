@@ -17,7 +17,7 @@ var dash_dir: int = 0
 var dash_cooldown_timer: float = 0.0
 
 # --- Boost variables ---
-@export var boost_multiplier: float = 1.5
+@export var boost_multiplier: float = 1.75
 var is_boosted: bool = false
 
 # --- Jump helpers ---

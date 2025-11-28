@@ -155,7 +155,7 @@ position = Vector2(1, 26)
 scale = Vector2(1.35, 1.35)
 sprite_frames = SubResource("SpriteFrames_7dwsv")
 animation = &"walk"
-frame_progress = 0.99735725
+frame_progress = 0.69590944
 
 [node name="BodyHitbox" type="CollisionShape2D" parent="."]
 position = Vector2(1.9999998, 28)
