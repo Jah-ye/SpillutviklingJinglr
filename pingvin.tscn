@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://ciur4o2v5ih08"]
+
+[ext_resource type="Script" uid="uid://y3alcvwghn4t" path="res://pingvinen.gd" id="1_am767"]
+[ext_resource type="Texture2D" uid="uid://mmxojgmyq86y" path="res://assets/c2b86d32-1d34-42c5-9aca-41f80d288a6c.png" id="2_thv8q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_am767"]
+radius = 39.319206
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_thv8q"]
+radius = 50.0
+
+[node name="Penguin_gd" type="CharacterBody2D"]
+
+[node name="pingvinen" type="CharacterBody2D" parent="."]
+script = ExtResource("1_am767")
+
+[node name="Sprite2D" type="Sprite2D" parent="pingvinen"]
+position = Vector2(394, 423.00003)
+scale = Vector2(0.19238283, 0.18798834)
+texture = ExtResource("2_thv8q")
+
+[node name="RayCastright" type="RayCast2D" parent="pingvinen"]
+position = Vector2(400, 471)
+target_position = Vector2(140, 10)
+
+[node name="RayCastleft" type="RayCast2D" parent="pingvinen/RayCastright"]
+position = Vector2(-9, -2)
+target_position = Vector2(-131, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(395, 379)
+shape = SubResource("CircleShape2D_am767")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(395, 456)
+shape = SubResource("CircleShape2D_thv8q")
