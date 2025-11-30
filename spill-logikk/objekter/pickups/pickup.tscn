@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw3nnuhp4pqxb"]
+
+[ext_resource type="Script" uid="uid://cgk2vi5jwe53g" path="res://objekter/pickups/pickup.gd" id="1_0drw0"]
+[ext_resource type="Texture2D" uid="uid://dmdpyfw7gexiv" path="res://assets/images/new_atlas_texture.tres" id="2_d1qn3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dffq"]
+size = Vector2(10, 10)
+
+[node name="pickup" type="CharacterBody2D"]
+script = ExtResource("1_0drw0")
+metadata/_custom_type_script = "uid://cgk2vi5jwe53g"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-9.536743e-07, 9.536743e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("2_d1qn3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8dffq")

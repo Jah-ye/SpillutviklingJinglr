@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg1165h4mepqi"]
+
+[ext_resource type="Texture2D" uid="uid://dmdpyfw7gexiv" path="res://assets/images/new_atlas_texture.tres" id="1_ik5ou"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ik5ou"]
+size = Vector2(12, 14)
+
+[node name="ResourceNode_Gift" type="Area2D" groups=["gifts"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.99999905, 9.536743e-07)
+scale = Vector2(0.4375, 0.4375)
+texture = ExtResource("1_ik5ou")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_ik5ou")
