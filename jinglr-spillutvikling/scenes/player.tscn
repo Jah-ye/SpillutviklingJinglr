@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cx42dueteocyu"]
+
+[ext_resource type="Script" uid="uid://e2pljvsmkiy0" path="res://snowball.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://bl3ypnpr3ok8g" path="res://c2b86d32-1d34-42c5-9aca-41f80d288a6c.png" id="2_g2els"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0e48y"]
+radius = 33.06055
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
+radius = 38.0
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_g2els")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(434, 289)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(346.5634, 534.84937)
+rotation = -3.1415927
+scale = Vector2(-0.1878015, -0.143441)
+texture = ExtResource("2_g2els")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(343, 504)
+shape = SubResource("CircleShape2D_0e48y")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(343, 554)
+shape = SubResource("CircleShape2D_qhqgy")
