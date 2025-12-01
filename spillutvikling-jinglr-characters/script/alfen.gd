@@ -3,7 +3,7 @@ extends CharacterBody2D
 # --- Movement variables ---
 @export var speed: float = 350.0
 @export var gravity: float = 1200.0
-@export var acceleration: float = 0.2       # ground acceleration
+@export var acceleration: float = 0.2
 @export var air_acceleration: float = 0.05
 const JUMP_VELOCITY = -450.0
 
@@ -26,14 +26,25 @@ var coyote_timer = 0.0
 var jump_buffer_time = 0.15
 var jump_buffer_timer = 0.0
 
+# --- SFX ---
+var jump_sfx = preload("res://sounds/alfen/jump.mp3")
+var boost_jump_sfx = preload("res://sounds/alfen/boostSFX.mp3")   # << NEW SOUND
+var dash_sfx_list = [
+	preload("res://sounds/alfen/swoosh01.mp3"),
+	preload("res://sounds/alfen/swoosh02.mp3")
+]
+var footstep_sfx = preload("res://sounds/alfen/walk.mp3")
+var footstep_timer = 0.0
+@export var footstep_interval = 0.3
+
 func _physics_process(delta: float):
 	apply_gravity(delta)
 	handle_timers(delta)
 	handle_input(delta)
+	handle_footsteps(delta)
 	move_and_slide()
 	update_animation()
 
-# --- Apply gravity ---
 func apply_gravity(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -42,7 +53,7 @@ func apply_gravity(delta):
 		velocity.y = 0
 		coyote_timer = coyote_time
 
-# --- Handle dash and cooldown timers ---
+# --- Handle dash cooldown ---
 func handle_timers(delta):
 	if dash_cooldown_timer > 0:
 		dash_cooldown_timer = max(0, dash_cooldown_timer - delta)
@@ -56,46 +67,72 @@ func handle_timers(delta):
 
 # --- Input handling ---
 func handle_input(delta):
-	# Horizontal movement
 	var input_axis = Input.get_action_strength("elf_right") - Input.get_action_strength("elf_left")
 	var target_velocity = input_axis * speed
 
-	var accel: float
-	if is_on_floor():
-		accel = acceleration
-	else:
-		accel = air_acceleration
-
+	var accel: float = acceleration if is_on_floor() else air_acceleration
 	velocity.x = lerp(velocity.x, target_velocity, accel)
 
-	# Jump buffering
+	# Jump buffer
 	if Input.is_action_just_pressed("elf_jump"):
 		jump_buffer_timer = jump_buffer_time
 	else:
 		jump_buffer_timer -= delta
 
-	# Execute jump if possible
 	if jump_buffer_timer > 0 and coyote_timer > 0:
 		if is_boosted:
 			velocity.y = JUMP_VELOCITY * boost_multiplier
 			is_boosted = false
+			play_boost_jump_sound() 
 		else:
 			velocity.y = JUMP_VELOCITY
+			play_jump_sound()
+
 		jump_buffer_timer = 0
 		coyote_timer = 0
 
+	# Dash
 	if Input.is_action_just_pressed("dash") and not is_dashing and dash_cooldown_timer <= 0:
 		start_dash()
-
+		play_dash_sound()
 
 func start_dash():
 	is_dashing = true
 	dash_timer = dash_duration
 	dash_dir = sign(Input.get_axis("elf_left", "elf_right"))
 	if dash_dir == 0:
-		dash_dir = 1  
+		dash_dir = 1
 
-# --- Animation ---
+# --- Footsteps ---
+func handle_footsteps(delta):
+	if is_on_floor() and abs(velocity.x) > 0.1:
+		var step_interval = footstep_interval / (abs(velocity.x) / speed)
+		footstep_timer -= delta
+
+		if footstep_timer <= 0:
+			$FootstepSFX.stream = footstep_sfx
+			$FootstepSFX.pitch_scale = lerp(1.0, 1.5, abs(velocity.x) / speed)
+			$FootstepSFX.play()
+			footstep_timer = step_interval
+	else:
+		if $FootstepSFX.playing:
+			$FootstepSFX.stop()
+		footstep_timer = 0
+
+
+func play_jump_sound():
+	$JumpSFX.stream = jump_sfx
+	$JumpSFX.play()
+
+func play_boost_jump_sound():       
+	$JumpSFX.stream = boost_jump_sfx
+	$JumpSFX.play()
+
+func play_dash_sound():
+	$DashSFX.stream = dash_sfx_list[randi() % dash_sfx_list.size()]
+	$DashSFX.play()
+
+
 func update_animation():
 	var animated_sprite = $AnimatedSprite
 	if not is_on_floor():

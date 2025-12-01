@@ -1,9 +1,9 @@
 [gd_scene load_steps=25 format=3 uid="uid://cmq40tfweirwp"]
 
 [ext_resource type="Script" uid="uid://bjyrpdlem3i7h" path="res://script/julenissen.gd" id="1_acrh8"]
-[ext_resource type="Texture2D" uid="uid://bbkp6rs17v6l0" path="res://assets/images/playerModels/julenissen/SantaIdle 1.png" id="2_acrh8"]
-[ext_resource type="Texture2D" uid="uid://dhemmeb0a0x4m" path="res://assets/images/playerModels/julenissen/SantaJump.png" id="3_wjos5"]
-[ext_resource type="Texture2D" uid="uid://csycxq8sbv0l2" path="res://assets/images/playerModels/julenissen/Santawalk.png" id="4_nmhvr"]
+[ext_resource type="Texture2D" uid="uid://bbkp6rs17v6l0" path="res://assets/playerModels/julenissen/SantaIdle 1.png" id="2_acrh8"]
+[ext_resource type="Texture2D" uid="uid://dhemmeb0a0x4m" path="res://assets/playerModels/julenissen/SantaJump.png" id="3_wjos5"]
+[ext_resource type="Texture2D" uid="uid://csycxq8sbv0l2" path="res://assets/playerModels/julenissen/Santawalk.png" id="4_nmhvr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pp0d5"]
 atlas = ExtResource("2_acrh8")
@@ -163,12 +163,18 @@ shape = SubResource("CapsuleShape2D_wjos5")
 position = Vector2(0.5, 11)
 shape = SubResource("RectangleShape2D_acrh8")
 
+[node name="FootstepsSFX" type="AudioStreamPlayer2D" parent="."]
+
+[node name="JumpSFX" type="AudioStreamPlayer2D" parent="."]
+
 [node name="BoostZone" type="Area2D" parent="."]
 position = Vector2(1, -37)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BoostZone"]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_wjos5")
+
+[node name="BoostSFX" type="AudioStreamPlayer2D" parent="BoostZone"]
 
 [connection signal="body_entered" from="BoostZone" to="." method="_on_BoostZone_body_entered"]
 [connection signal="body_exited" from="BoostZone" to="." method="_on_BoostZone_body_exited"]

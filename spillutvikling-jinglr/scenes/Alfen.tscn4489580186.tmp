@@ -49,27 +49,27 @@ region = Rect2(64, 64, 32, 32)
 atlas = ExtResource("3_yh66k")
 region = Rect2(0, 96, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vb1qp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pldrh"]
 atlas = ExtResource("4_vb1qp")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pldrh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_luqwe"]
 atlas = ExtResource("4_vb1qp")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_luqwe"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_inrnm"]
 atlas = ExtResource("4_vb1qp")
 region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_inrnm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipk82"]
 atlas = ExtResource("4_vb1qp")
 region = Rect2(32, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ipk82"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_oeuwf"]
 atlas = ExtResource("4_vb1qp")
 region = Rect2(0, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oeuwf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5a0ss"]
 atlas = ExtResource("4_vb1qp")
 region = Rect2(32, 64, 32, 32)
 
@@ -120,9 +120,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vb1qp")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_pldrh")
 }, {
 "duration": 1.0,
@@ -136,28 +133,31 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oeuwf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5a0ss")
 }],
 "loop": true,
 "name": &"walk",
 "speed": 12.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5a0ss"]
-radius = 6.42857
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vb1qp"]
+radius = 5.714283
 
-[node name="Alfen" type="CharacterBody2D" groups=["SmallCharacter"]]
+[node name="Alfen" type="CharacterBody2D" groups=["Alfen"]]
 position = Vector2(58, 17)
 script = ExtResource("1_vb1qp")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1, 26)
-scale = Vector2(1.35, 1.35)
+scale = Vector2(1.4, 1.4)
 sprite_frames = SubResource("SpriteFrames_7dwsv")
 animation = &"walk"
-frame_progress = 0.69590944
+frame_progress = 0.7030216
 
-[node name="BodyHitbox" type="CollisionShape2D" parent="."]
-position = Vector2(1.9999998, 28)
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(1.1920929e-07, 28)
 scale = Vector2(1.4, 1.4)
-shape = SubResource("CapsuleShape2D_5a0ss")
+shape = SubResource("CapsuleShape2D_vb1qp")

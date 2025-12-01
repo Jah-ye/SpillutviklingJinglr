@@ -1,9 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://b7j8n8rpe6j4b"]
+[gd_scene load_steps=25 format=3 uid="uid://b7j8n8rpe6j4b"]
 
 [ext_resource type="Script" path="res://script/alfen.gd" id="1_vb1qp"]
-[ext_resource type="Texture2D" uid="uid://cwh1mbltn58jj" path="res://assets/images/playerModels/alfen/Idle.png" id="2_yh66k"]
-[ext_resource type="Texture2D" uid="uid://dx416835kd00x" path="res://assets/images/playerModels/alfen/JumpElf.png" id="3_yh66k"]
-[ext_resource type="Texture2D" uid="uid://ulxp8mcnfvy3" path="res://assets/images/playerModels/alfen/ElfMoving.png" id="4_vb1qp"]
+[ext_resource type="Texture2D" uid="uid://cwh1mbltn58jj" path="res://assets/playerModels/alfen/Idle.png" id="2_yh66k"]
+[ext_resource type="Texture2D" uid="uid://dx416835kd00x" path="res://assets/playerModels/alfen/JumpElf.png" id="3_yh66k"]
+[ext_resource type="Texture2D" uid="uid://ulxp8mcnfvy3" path="res://assets/playerModels/alfen/ElfMoving.png" id="4_vb1qp"]
+[ext_resource type="AudioStream" uid="uid://blbl8tw848md" path="res://sounds/alfen/swoosh01.mp3" id="5_yh66k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yh66k"]
 atlas = ExtResource("2_yh66k")
@@ -161,3 +162,14 @@ frame_progress = 0.69590944
 position = Vector2(1.9999998, 28)
 scale = Vector2(1.4, 1.4)
 shape = SubResource("CapsuleShape2D_5a0ss")
+
+[node name="DashSFX" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-9, 32)
+stream = ExtResource("5_yh66k")
+
+[node name="JumpSFX" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-2, 50)
+
+[node name="FootstepSFX" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, 44)
+volume_db = 15.0
