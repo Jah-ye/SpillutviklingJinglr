@@ -3,7 +3,7 @@ extends CharacterBody2D
 # --- Movement variables ---
 @export var speed: float = 250.0
 @export var gravity: float = 1200.0
-@export var acceleration: float = 0.1       # slow, heavy movement
+@export var acceleration: float = 0.1 
 @export var air_acceleration: float = 0.03
 const JUMP_VELOCITY = -300.0
 
@@ -13,12 +13,11 @@ var coyote_timer = 0.0
 var jump_buffer_time = 0.1
 var jump_buffer_timer = 0.0
 
-# --- Footstep SFX ---
+
 var footstep_sfx = preload("res://sounds/julenissen/footsteps.mp3")
 var footstep_timer = 0.0
-@export var footstep_interval = 0.35   # base interval between footsteps
+@export var footstep_interval = 0.35 
 
-# --- Jump SFX ---
 var jump_sfx = preload("res://sounds/julenissen/jump.mp3")
 
 func _physics_process(delta: float):
@@ -28,7 +27,7 @@ func _physics_process(delta: float):
 	move_and_slide()
 	update_animation()
 
-# --- Apply gravity ---
+
 func apply_gravity(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -59,7 +58,6 @@ func handle_input(delta):
 # --- Footsteps SFX ---
 func handle_footsteps(delta):
 	if is_on_floor() and abs(velocity.x) > 0.1:
-		# Adjust interval based on speed
 		var step_interval = footstep_interval / (abs(velocity.x) / speed)
 		footstep_timer -= delta
 		if footstep_timer <= 0:
